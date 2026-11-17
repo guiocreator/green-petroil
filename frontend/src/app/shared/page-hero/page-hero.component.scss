@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(3rem, 8vw, 5rem);
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(155, 227, 192, 0.25), transparent 45%),
+    linear-gradient(135deg, var(--verde-950) 0%, var(--verde-900) 55%, var(--verde-700) 100%);
+
+  /* Detalhe decorativo de "gota" ao fundo */
+  &::after {
+    content: '';
+    position: absolute;
+    right: -60px;
+    bottom: -120px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+  }
+
+  h1 {
+    color: #fff;
+    max-width: 20ch;
+    margin-bottom: 0.4em;
+  }
+}
+
+.hero__sobretitulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--verde-300);
+  margin-bottom: 0.75rem;
+}
+
+.hero__descricao {
+  max-width: 60ch;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+}

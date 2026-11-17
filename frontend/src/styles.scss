@@ -1,0 +1,205 @@
+/* =========================================================
+   Green Petroil – estilos globais e identidade visual
+   ========================================================= */
+
+:root {
+  /* Paleta da marca */
+  --verde-950: #072a20;
+  --verde-900: #0b3d2e;
+  --verde-700: #11694a;
+  --verde-500: #1f9d6b;
+  --verde-300: #9be3c0;
+  --verde-100: #e6f4ee;
+  --petroleo: #10201c;
+  --ambar: #f2a900;
+  --ambar-escuro: #8a5a00;
+
+  /* Neutros */
+  --texto: #1f2d2a;
+  --texto-suave: #4a5c58;
+  --fundo: #f7faf8;
+  --superficie: #ffffff;
+  --borda: #d8e4df;
+
+  /* Tipografia */
+  --fonte-titulo: 'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --fonte-texto: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Layout */
+  --largura-max: 1180px;
+  --raio: 14px;
+  --sombra: 0 6px 24px rgba(11, 61, 46, 0.08);
+  --sombra-forte: 0 14px 40px rgba(11, 61, 46, 0.16);
+  --altura-header: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--texto);
+  background: var(--fundo);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fonte-titulo);
+  line-height: 1.2;
+  color: var(--verde-950);
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+h3 { font-size: 1.2rem; }
+
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--verde-700);
+  text-underline-offset: 3px;
+}
+
+a:hover { color: var(--verde-500); }
+
+img,
+svg { max-width: 100%; }
+
+/* Foco visível e consistente para navegação por teclado */
+:focus-visible {
+  outline: 3px solid var(--ambar);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Utilitários */
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.secao {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+}
+
+.secao--clara {
+  background: var(--superficie);
+}
+
+.sobretitulo {
+  display: inline-block;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--verde-700);
+  margin-bottom: 0.6rem;
+}
+
+.cabecalho-secao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  h2 { margin-bottom: 0; }
+}
+
+.grade {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+}
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+
+  &:hover { transform: translateY(-2px); }
+}
+
+.botao--primario {
+  background: var(--ambar);
+  color: var(--petroleo);
+
+  &:hover { background: #ffbe2e; color: var(--petroleo); }
+}
+
+.botao--contorno {
+  border-color: currentColor;
+  color: var(--verde-700);
+  background: transparent;
+
+  &:hover { background: var(--verde-700); color: #fff; border-color: var(--verde-700); }
+}
+
+.botao--claro {
+  border-color: #fff;
+  color: #fff;
+
+  &:hover { background: #fff; color: var(--verde-900); }
+}
+
+.link-seta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+}
+
+/* Texto apenas para leitores de tela */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respeita quem prefere menos animações */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

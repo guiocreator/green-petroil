@@ -1,0 +1,44 @@
+<app-page-hero
+  sobretitulo="Projetos sociais"
+  titulo="Energia para transformar vidas"
+  descricao="Investimos em educação, meio ambiente, saúde e geração de renda nas comunidades onde atuamos. Conheça as iniciativas mantidas pela Green Petroil."
+/>
+
+<section class="secao" aria-labelledby="titulo-lista-projetos">
+  <div class="container">
+    <h2 id="titulo-lista-projetos" class="sr-only">Lista de projetos sociais</h2>
+
+    <app-load-state
+      [estado]="estado()"
+      mensagemCarregando="Carregando projetos sociais..."
+      (tentarNovamente)="carregar()"
+    />
+
+    @if (estado() === 'ok') {
+      <div class="filtros" role="group" aria-label="Filtrar projetos por área">
+        @for (area of areas(); track area) {
+          <button
+            type="button"
+            class="filtros__botao"
+            [class.filtros__botao--ativo]="area === areaSelecionada()"
+            [attr.aria-pressed]="area === areaSelecionada()"
+            (click)="filtrar(area)"
+          >
+            {{ area }}
+          </button>
+        }
+      </div>
+
+      <p class="total" aria-live="polite">
+        {{ projetosFiltrados().length }}
+        {{ projetosFiltrados().length === 1 ? 'projeto encontrado' : 'projetos encontrados' }}
+      </p>
+
+      <ul class="grade lista">
+        @for (projeto of projetosFiltrados(); track projeto.id) {
+          <li><app-project-card [projeto]="projeto" /></li>
+        }
+      </ul>
+    }
+  </div>
+</section>

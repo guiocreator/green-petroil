@@ -1,0 +1,96 @@
+[
+  {
+    "id": 1,
+    "slug": "campo-aurora-pre-sal",
+    "titulo": "Campo Aurora: nova fronteira no pré-sal da Bacia de Santos",
+    "resumo": "A Green Petroil inicia a operação do Campo Aurora, com plataforma de última geração e captura de carbono integrada ao processo de produção.",
+    "categoria": "Exploração",
+    "autor": "Comunicação Green Petroil",
+    "data": "2026-11-10",
+    "tempoLeitura": 4,
+    "conteudo": [
+      "A Green Petroil deu início à produção no Campo Aurora, localizado a cerca de 230 km da costa, na Bacia de Santos. O projeto representa um dos maiores investimentos da história da companhia e reforça a posição da empresa entre as principais produtoras de energia do país.",
+      "A plataforma do tipo FPSO instalada no campo tem capacidade para processar até 180 mil barris de óleo por dia e foi projetada com um sistema de reinjeção de CO₂ no próprio reservatório, reduzindo de forma significativa as emissões associadas à produção.",
+      "Além da tecnologia de captura, a unidade conta com geração de energia mais eficiente, monitoramento ambiental em tempo real e um programa de proteção da fauna marinha desenvolvido em parceria com universidades brasileiras.",
+      "Segundo a diretoria de Exploração e Produção, o Campo Aurora é a prova de que é possível produzir a energia que o país precisa com responsabilidade, inovação e respeito ao meio ambiente."
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "refinaria-horizonte-diesel-renovavel",
+    "titulo": "Refinaria Horizonte passa a produzir diesel com conteúdo renovável",
+    "resumo": "Modernização da unidade permite o coprocessamento de óleo vegetal, gerando um combustível com menor pegada de carbono.",
+    "categoria": "Refino",
+    "autor": "Comunicação Green Petroil",
+    "data": "2026-10-28",
+    "tempoLeitura": 3,
+    "conteudo": [
+      "A Refinaria Horizonte concluiu a modernização de sua unidade de hidrotratamento e já produz diesel com conteúdo renovável, obtido pelo coprocessamento de óleo vegetal junto ao petróleo.",
+      "O novo combustível mantém a mesma qualidade e desempenho do diesel convencional, mas reduz as emissões de gases de efeito estufa ao longo de seu ciclo de vida.",
+      "A iniciativa faz parte do plano de transição energética da companhia, que prevê investimentos crescentes em combustíveis de baixo carbono até 2035.",
+      "Com a mudança, a Green Petroil amplia sua oferta de produtos mais sustentáveis sem a necessidade de adaptações nos motores dos veículos de seus clientes."
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "projeto-netuno-aguas-ultraprofundas",
+    "titulo": "Projeto Netuno bate recorde de perfuração em águas ultraprofundas",
+    "resumo": "Poço exploratório atingiu mais de 7 mil metros de profundidade total, com uso de inteligência artificial para otimizar a operação.",
+    "categoria": "Exploração",
+    "autor": "Comunicação Green Petroil",
+    "data": "2026-10-15",
+    "tempoLeitura": 5,
+    "conteudo": [
+      "O Projeto Netuno alcançou um marco histórico: o poço exploratório perfurado pela Green Petroil atingiu mais de 7 mil metros de profundidade total, somando lâmina d'água e perfuração no subsolo marinho.",
+      "A operação utilizou modelos de inteligência artificial para analisar dados sísmicos e ajustar os parâmetros de perfuração em tempo real, reduzindo o tempo de operação em 22% e o consumo de combustível da sonda.",
+      "Os resultados preliminares indicam a presença de um reservatório de alta qualidade, que poderá ser desenvolvido nos próximos anos com padrões rigorosos de segurança operacional.",
+      "O recorde reforça a liderança tecnológica da companhia e o compromisso com uma exploração cada vez mais eficiente e segura."
+    ]
+  },
+  {
+    "id": 4,
+    "slug": "gas-natural-transicao-energetica",
+    "titulo": "Gás natural: a ponte da Green Petroil para a transição energética",
+    "resumo": "Novo gasoduto vai levar gás natural a indústrias do interior, substituindo combustíveis mais poluentes como o carvão.",
+    "categoria": "Gás Natural",
+    "autor": "Comunicação Green Petroil",
+    "data": "2026-09-30",
+    "tempoLeitura": 4,
+    "conteudo": [
+      "A Green Petroil anunciou a construção de um gasoduto de 420 km que levará gás natural a polos industriais do interior, onde hoje ainda predominam combustíveis mais poluentes.",
+      "A substituição do carvão e do óleo combustível pelo gás natural pode reduzir em até 40% as emissões de CO₂ das indústrias atendidas, além de diminuir a emissão de material particulado.",
+      "O projeto deve gerar cerca de 3 mil empregos diretos durante a construção e foi planejado com rotas que evitam áreas de preservação ambiental.",
+      "Para a companhia, o gás natural é peça-chave para garantir segurança energética enquanto as fontes renováveis ganham escala."
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "plataforma-eletrificada-mar-do-norte",
+    "titulo": "Primeira plataforma eletrificada por energia eólica offshore",
+    "resumo": "Em parceria internacional, a Green Petroil conecta uma plataforma de produção a um parque eólico em alto-mar.",
+    "categoria": "Inovação",
+    "autor": "Comunicação Green Petroil",
+    "data": "2026-09-12",
+    "tempoLeitura": 3,
+    "conteudo": [
+      "A Green Petroil concluiu a conexão de uma de suas plataformas de produção a um parque eólico offshore, tornando-se a primeira unidade da empresa a operar majoritariamente com energia renovável.",
+      "A eletrificação substitui as turbinas a gás que antes geravam a energia da plataforma, evitando a emissão de aproximadamente 200 mil toneladas de CO₂ por ano.",
+      "O modelo será avaliado para replicação em outras unidades da companhia ao longo da próxima década."
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "centro-pesquisa-energia-inaugurado",
+    "titulo": "Green Petroil inaugura centro de pesquisa em energia e clima",
+    "resumo": "Novo centro reúne mais de 300 pesquisadores dedicados a tecnologias de exploração, captura de carbono e novas energias.",
+    "categoria": "Inovação",
+    "autor": "Comunicação Green Petroil",
+    "data": "2026-08-20",
+    "tempoLeitura": 3,
+    "conteudo": [
+      "Foi inaugurado o Centro de Pesquisa em Energia e Clima da Green Petroil, que reunirá mais de 300 pesquisadores em laboratórios dedicados à exploração, ao refino e às novas energias.",
+      "Entre as linhas de pesquisa estão a captura e armazenamento de carbono, o hidrogênio de baixa emissão e o uso de inteligência artificial na interpretação de dados geológicos.",
+      "O centro também manterá parcerias com universidades e startups, fortalecendo o ecossistema de inovação no país."
+    ]
+  }
+]

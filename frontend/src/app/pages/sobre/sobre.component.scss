@@ -1,0 +1,166 @@
+/* ---------- Missão e visão ---------- */
+.proposito {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.proposito__item {
+  padding: 2rem;
+  border-radius: var(--raio);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  box-shadow: var(--sombra);
+
+  p { margin: 0; font-size: 1.05rem; }
+}
+
+.proposito__item--escuro {
+  background: var(--verde-900);
+  border-color: var(--verde-900);
+  color: rgba(255, 255, 255, 0.9);
+
+  h3 { color: #fff; }
+
+  .proposito__icone {
+    background: rgba(155, 227, 192, 0.15);
+    color: var(--verde-300);
+  }
+}
+
+.proposito__icone {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: var(--verde-100);
+  color: var(--verde-700);
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Valores ---------- */
+.valores {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+}
+
+.valores__item {
+  padding: 1.5rem;
+  border-radius: var(--raio);
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+
+  h3 { font-size: 1.05rem; }
+
+  p { margin: 0; color: var(--texto-suave); font-size: 0.95rem; }
+}
+
+.valores__numero {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--ambar);
+  color: var(--petroleo);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  margin-bottom: 0.9rem;
+}
+
+/* ---------- Linha do tempo ---------- */
+.linha-tempo {
+  list-style: none;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 44px;
+    width: 3px;
+    background: var(--verde-100);
+  }
+}
+
+.linha-tempo__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 1.25rem;
+  padding-bottom: 2rem;
+
+  &:last-child { padding-bottom: 0; }
+}
+
+.linha-tempo__ano {
+  position: relative;
+  z-index: 1;
+  align-self: start;
+  margin: 0;
+  padding: 0.35rem 0;
+  border-radius: 999px;
+  background: var(--verde-700);
+  color: #fff;
+  text-align: center;
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+}
+
+.linha-tempo__conteudo {
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--raio);
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  box-shadow: var(--sombra);
+
+  p { margin: 0; color: var(--texto-suave); }
+}
+
+/* ---------- Números ---------- */
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.numeros__item {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1.25rem;
+  border-radius: var(--raio);
+  background: var(--verde-100);
+  text-align: center;
+
+  dd {
+    margin: 0;
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--verde-700);
+  }
+
+  dt { color: var(--texto-suave); }
+}
+
+.chamada {
+  font-size: 1.05rem;
+  margin: 0;
+}

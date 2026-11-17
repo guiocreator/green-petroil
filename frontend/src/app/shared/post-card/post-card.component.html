@@ -1,0 +1,31 @@
+<article class="card">
+  <div class="card__capa" [style.background]="visual().gradiente" aria-hidden="true">
+    <app-icon [nome]="visual().icone" [tamanho]="56" />
+  </div>
+
+  <div class="card__corpo">
+    <p class="card__meta">
+      <span class="card__categoria">{{ post().categoria }}</span>
+      <time [attr.datetime]="post().data">{{ post().data | date: 'dd MMM yyyy' }}</time>
+    </p>
+
+    @if (nivelTitulo() === 2) {
+      <h2 class="card__titulo">
+        <a [routerLink]="['/noticias', post().slug]" class="card__link">{{ post().titulo }}</a>
+      </h2>
+    } @else {
+      <h3 class="card__titulo">
+        <a [routerLink]="['/noticias', post().slug]" class="card__link">{{ post().titulo }}</a>
+      </h3>
+    }
+
+    <p class="card__resumo">{{ post().resumo }}</p>
+
+    <p class="card__rodape" aria-hidden="true">
+      <span class="card__leitura">
+        <app-icon nome="relogio" [tamanho]="16" /> {{ post().tempoLeitura }} min de leitura
+      </span>
+      <span class="card__ler">Ler post <app-icon nome="seta-direita" [tamanho]="16" /></span>
+    </p>
+  </div>
+</article>

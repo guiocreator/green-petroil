@@ -1,0 +1,93 @@
+<app-page-hero
+  sobretitulo="Sobre nós"
+  titulo="Mais de 50 anos gerando energia para o Brasil"
+  descricao="Conheça a trajetória, a missão, a visão e os valores que fazem da Green Petroil uma empresa comprometida com as pessoas e com o planeta."
+/>
+
+<div class="container">
+  <app-load-state
+    [estado]="estado()"
+    mensagemCarregando="Carregando informações da empresa..."
+    (tentarNovamente)="carregar()"
+  />
+</div>
+
+@if (empresa(); as empresa) {
+  <!-- Missão e visão -->
+  <section class="secao" aria-labelledby="titulo-proposito">
+    <div class="container">
+      <p class="sobretitulo">Nosso propósito</p>
+      <h2 id="titulo-proposito">{{ empresa.slogan }}</h2>
+
+      <div class="proposito">
+        <article class="proposito__item">
+          <div class="proposito__icone" aria-hidden="true"><app-icon nome="alvo" [tamanho]="32" /></div>
+          <h3>Missão</h3>
+          <p>{{ empresa.missao }}</p>
+        </article>
+        <article class="proposito__item proposito__item--escuro">
+          <div class="proposito__icone" aria-hidden="true"><app-icon nome="olho" [tamanho]="32" /></div>
+          <h3>Visão</h3>
+          <p>{{ empresa.visao }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="secao secao--clara" aria-labelledby="titulo-valores">
+    <div class="container">
+      <p class="sobretitulo">O que nos guia</p>
+      <h2 id="titulo-valores">Nossos valores</h2>
+
+      <ul class="valores">
+        @for (valor of empresa.valores; track valor.titulo; let i = $index) {
+          <li class="valores__item">
+            <span class="valores__numero" aria-hidden="true">{{ i + 1 }}</span>
+            <h3>{{ valor.titulo }}</h3>
+            <p>{{ valor.texto }}</p>
+          </li>
+        }
+      </ul>
+    </div>
+  </section>
+
+  <!-- História (linha do tempo) -->
+  <section class="secao" aria-labelledby="titulo-historia">
+    <div class="container">
+      <p class="sobretitulo">Nossa trajetória</p>
+      <h2 id="titulo-historia">História</h2>
+
+      <ol class="linha-tempo">
+        @for (marco of empresa.historia; track marco.ano) {
+          <li class="linha-tempo__item">
+            <p class="linha-tempo__ano"><time [attr.datetime]="marco.ano">{{ marco.ano }}</time></p>
+            <div class="linha-tempo__conteudo">
+              <h3>{{ marco.titulo }}</h3>
+              <p>{{ marco.texto }}</p>
+            </div>
+          </li>
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- Números e chamada -->
+  <section class="secao secao--clara" aria-labelledby="titulo-numeros-sobre">
+    <div class="container">
+      <h2 id="titulo-numeros-sobre">A Green Petroil em números</h2>
+      <dl class="numeros">
+        @for (numero of empresa.numeros; track numero.rotulo) {
+          <div class="numeros__item">
+            <dt>{{ numero.rotulo }}</dt>
+            <dd>{{ numero.valor }}</dd>
+          </div>
+        }
+      </dl>
+      <p class="chamada">
+        Quer saber como transformamos energia em desenvolvimento social?
+        <a routerLink="/projetos-sociais">Conheça nossos projetos sociais</a>.
+      </p>
+    </div>
+  </section>
+}

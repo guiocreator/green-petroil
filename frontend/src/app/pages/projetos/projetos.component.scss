@@ -1,0 +1,42 @@
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.filtros__botao {
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--borda);
+  background: var(--superficie);
+  color: var(--texto);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+
+  &:hover {
+    border-color: var(--verde-500);
+    color: var(--verde-700);
+  }
+}
+
+.filtros__botao--ativo,
+.filtros__botao--ativo:hover {
+  background: var(--verde-700);
+  border-color: var(--verde-700);
+  color: #fff;
+}
+
+.total {
+  color: var(--texto-suave);
+  margin-bottom: 1.5rem;
+}

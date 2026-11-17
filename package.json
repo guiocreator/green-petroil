@@ -1,0 +1,16 @@
+{
+  "name": "green-petroil",
+  "version": "1.0.0",
+  "description": "Site corporativo da Green Petroil – Trabalho semestral de Front-end Frameworks (Angular + API Node/Express)",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install --prefix backend && npm install --prefix frontend",
+    "start": "concurrently -n API,SITE -c green,cyan \"npm run api\" \"npm run site\"",
+    "api": "npm start --prefix backend",
+    "site": "npm start --prefix frontend -- --open",
+    "build": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

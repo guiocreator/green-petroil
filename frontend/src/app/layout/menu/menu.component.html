@@ -1,0 +1,18 @@
+<nav [attr.aria-label]="rotuloAcessivel()" [attr.id]="idMenu()" class="menu" [class.menu--aberto]="aberto()">
+  <ul class="menu__lista">
+    @for (item of itens; track item.rota) {
+      <li>
+        <a
+          class="menu__link"
+          [routerLink]="item.rota"
+          routerLinkActive="menu__link--ativo"
+          [routerLinkActiveOptions]="{ exact: !!item.exato }"
+          ariaCurrentWhenActive="page"
+          (click)="navegou.emit()"
+        >
+          {{ item.rotulo }}
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

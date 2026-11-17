@@ -1,0 +1,57 @@
+.footer {
+  background: var(--petroleo);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+
+  a { color: var(--verde-300); }
+}
+
+.footer__grade {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  padding-block: 3.5rem 2.5rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 1.6fr 1fr 1.2fr 1.2fr;
+  }
+}
+
+.footer__marca p {
+  margin-top: 1rem;
+  max-width: 38ch;
+}
+
+.footer__titulo {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer__contato {
+  font-style: normal;
+  line-height: 1.9;
+}
+
+.footer__ticker {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  color: var(--ambar);
+
+  abbr { text-decoration: none; }
+}
+
+.footer__base {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-block: 1.25rem;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+
+  p { margin: 0; }
+}

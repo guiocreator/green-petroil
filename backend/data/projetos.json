@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "nome": "Mares Vivos",
+    "area": "Meio ambiente",
+    "descricao": "Monitoramento e recuperação de recifes de coral e manguezais no litoral brasileiro, com a participação de pesquisadores e comunidades pesqueiras.",
+    "local": "Litoral de SP, RJ e ES",
+    "beneficiados": "48 comunidades costeiras",
+    "inicio": 2019,
+    "icone": "onda"
+  },
+  {
+    "id": 2,
+    "nome": "Energia que Educa",
+    "area": "Educação",
+    "descricao": "Laboratórios de ciência e programação em escolas públicas, com bolsas de estudo para alunos que se destacam em olimpíadas científicas.",
+    "local": "120 escolas públicas",
+    "beneficiados": "35 mil estudantes",
+    "inicio": 2017,
+    "icone": "livro"
+  },
+  {
+    "id": 3,
+    "nome": "Floresta Futura",
+    "area": "Meio ambiente",
+    "descricao": "Plantio de espécies nativas da Mata Atlântica e do Cerrado, recuperando nascentes e criando corredores ecológicos.",
+    "local": "MG, SP e GO",
+    "beneficiados": "2,5 milhões de mudas plantadas",
+    "inicio": 2020,
+    "icone": "arvore"
+  },
+  {
+    "id": 4,
+    "nome": "Capacita+",
+    "area": "Geração de renda",
+    "descricao": "Cursos gratuitos de qualificação profissional nas áreas de solda, elétrica, logística e tecnologia para moradores das regiões onde a empresa atua.",
+    "local": "Regiões operacionais",
+    "beneficiados": "12 mil pessoas formadas",
+    "inicio": 2018,
+    "icone": "ferramenta"
+  },
+  {
+    "id": 5,
+    "nome": "Água Limpa",
+    "area": "Saúde e saneamento",
+    "descricao": "Instalação de sistemas de tratamento e captação de água da chuva em comunidades rurais do semiárido.",
+    "local": "Semiárido nordestino",
+    "beneficiados": "18 mil famílias",
+    "inicio": 2021,
+    "icone": "gota"
+  },
+  {
+    "id": 6,
+    "nome": "Esporte na Comunidade",
+    "area": "Esporte e cultura",
+    "descricao": "Escolinhas de esporte no contraturno escolar, com acompanhamento pedagógico e alimentação para crianças e adolescentes.",
+    "local": "25 municípios",
+    "beneficiados": "9 mil crianças e jovens",
+    "inicio": 2016,
+    "icone": "bola"
+  }
+]

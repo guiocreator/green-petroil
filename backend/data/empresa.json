@@ -1,0 +1,46 @@
+{
+  "nome": "Green Petroil S.A.",
+  "slogan": "Energia que move o presente, compromisso que protege o futuro.",
+  "historia": [
+    {
+      "ano": 1972,
+      "titulo": "A fundação",
+      "texto": "A Green Petroil nasce como uma pequena distribuidora de combustíveis no interior paulista, com a missão de levar energia a regiões ainda pouco atendidas."
+    },
+    {
+      "ano": 1988,
+      "titulo": "Primeiro poço próprio",
+      "texto": "A companhia descobre seu primeiro campo de petróleo em terra e passa a atuar também na exploração e produção."
+    },
+    {
+      "ano": 2004,
+      "titulo": "Abertura de capital",
+      "texto": "A Green Petroil abre seu capital na bolsa de valores, ampliando os investimentos em exploração offshore."
+    },
+    {
+      "ano": 2012,
+      "titulo": "Rumo ao pré-sal",
+      "texto": "A empresa entra nos leilões do pré-sal e se torna uma das principais operadoras em águas ultraprofundas do país."
+    },
+    {
+      "ano": 2023,
+      "titulo": "Plano Energia Verde 2035",
+      "texto": "Lançamento do plano de transição energética, com metas de redução de emissões e investimentos em biocombustíveis, captura de carbono e energia eólica."
+    }
+  ],
+  "missao": "Fornecer energia de forma segura, eficiente e responsável, gerando valor para acionistas, colaboradores e para a sociedade, com respeito ao meio ambiente.",
+  "visao": "Ser reconhecida até 2035 como a empresa de energia mais inovadora e sustentável da América Latina, liderando a transição para uma matriz de baixo carbono.",
+  "valores": [
+    { "titulo": "Segurança em primeiro lugar", "texto": "Nenhuma meta é mais importante que a vida e a integridade das pessoas." },
+    { "titulo": "Respeito ao meio ambiente", "texto": "Cada operação é planejada para minimizar impactos e proteger os ecossistemas." },
+    { "titulo": "Ética e transparência", "texto": "Agimos com integridade e prestamos contas à sociedade e aos investidores." },
+    { "titulo": "Inovação", "texto": "Investimos em ciência e tecnologia para produzir mais energia com menos emissões." },
+    { "titulo": "Valorização das pessoas", "texto": "Acreditamos no desenvolvimento dos nossos colaboradores e das comunidades onde atuamos." }
+  ],
+  "numeros": [
+    { "valor": "50+", "rotulo": "anos de história" },
+    { "valor": "12 mil", "rotulo": "colaboradores" },
+    { "valor": "-35%", "rotulo": "emissões desde 2015" },
+    { "valor": "R$ 1,2 bi", "rotulo": "investidos em projetos sociais" }
+  ]
+}

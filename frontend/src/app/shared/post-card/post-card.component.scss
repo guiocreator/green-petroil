@@ -1,0 +1,109 @@
+:host { display: block; }
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--superficie);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  transition: transform 0.25s, box-shadow 0.25s;
+
+  &:hover,
+  &:focus-within {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-forte);
+  }
+}
+
+.card__capa {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.card__corpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.25rem 1.4rem 1.4rem;
+}
+
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--texto-suave);
+  margin-bottom: 0.75rem;
+}
+
+.card__categoria {
+  padding: 0.15rem 0.65rem;
+  border-radius: 999px;
+  background: var(--verde-100);
+  color: var(--verde-700);
+  font-weight: 600;
+}
+
+.card__titulo {
+  font-size: 1.15rem;
+  margin-bottom: 0.6rem;
+}
+
+/* O link "estica" para tornar todo o cartão clicável, mantendo um único link acessível */
+.card__link {
+  color: var(--verde-950);
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  &:hover { color: var(--verde-700); }
+
+  &:focus-visible {
+    outline: none;
+
+    &::after {
+      outline: 3px solid var(--ambar);
+      outline-offset: -3px;
+      border-radius: var(--raio);
+    }
+  }
+}
+
+.card__resumo {
+  color: var(--texto-suave);
+  flex: 1;
+}
+
+.card__rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.card__leitura,
+.card__ler {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.card__leitura { color: var(--texto-suave); }
+
+.card__ler {
+  color: var(--verde-700);
+  font-weight: 600;
+}

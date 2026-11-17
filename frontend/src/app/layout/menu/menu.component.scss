@@ -1,0 +1,74 @@
+.menu__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.menu__link {
+  display: block;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* ---------- Variante principal (cabeçalho) ---------- */
+:host(.menu--principal) {
+  .menu__link {
+    color: var(--texto);
+
+    &:hover { background: var(--verde-100); color: var(--verde-700); }
+  }
+
+  .menu__link--ativo {
+    background: var(--verde-700);
+    color: #fff;
+
+    &:hover { background: var(--verde-700); color: #fff; }
+  }
+
+  /* Celular: o menu vira um painel que abre abaixo do cabeçalho */
+  @media (max-width: 767px) {
+    .menu {
+      display: none;
+      position: absolute;
+      top: var(--altura-header);
+      left: 0;
+      right: 0;
+      padding: 1rem 1.25rem 1.5rem;
+      background: var(--superficie);
+      border-bottom: 1px solid var(--borda);
+      box-shadow: var(--sombra-forte);
+    }
+
+    .menu--aberto { display: block; }
+
+    .menu__lista { flex-direction: column; }
+
+    .menu__link {
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+    }
+  }
+}
+
+/* ---------- Variante rodapé ---------- */
+:host(.menu--rodape) {
+  .menu__lista {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .menu__link {
+    padding: 0.3rem 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+
+    &:hover { color: var(--verde-300); text-decoration: underline; }
+  }
+
+  .menu__link--ativo { color: var(--verde-300); }
+}

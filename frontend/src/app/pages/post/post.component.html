@@ -1,0 +1,71 @@
+<div class="container">
+  <nav aria-label="Você está em" class="trilha">
+    <ol>
+      <li><a routerLink="/">Início</a></li>
+      <li><a routerLink="/noticias">Notícias</a></li>
+      <li aria-current="page">{{ post()?.titulo ?? 'Notícia' }}</li>
+    </ol>
+  </nav>
+
+  <app-load-state
+    [estado]="estado()"
+    mensagemCarregando="Carregando notícia..."
+    (tentarNovamente)="carregar()"
+  />
+</div>
+
+@if (estado() === 'ok') {
+  @if (naoEncontrado()) {
+    <section class="container nao-encontrado" aria-labelledby="titulo-nao-encontrado">
+      <h1 id="titulo-nao-encontrado">Notícia não encontrada</h1>
+      <p>A notícia que você procura não existe ou foi removida.</p>
+      <a routerLink="/noticias" class="botao botao--contorno">Ver todas as notícias</a>
+    </section>
+  } @else if (post(); as post) {
+    <article class="post">
+      <header class="container post__cabecalho">
+        <p class="post__categoria">{{ post.categoria }}</p>
+        <h1>{{ post.titulo }}</h1>
+        <p class="post__resumo">{{ post.resumo }}</p>
+        <p class="post__meta">
+          <span><app-icon nome="calendario" [tamanho]="18" />
+            <time [attr.datetime]="post.data">{{ post.data | date: "d 'de' MMMM 'de' yyyy" }}</time>
+          </span>
+          <span><app-icon nome="relogio" [tamanho]="18" /> {{ post.tempoLeitura }} min de leitura</span>
+          <span>Por {{ post.autor }}</span>
+        </p>
+      </header>
+
+      <div class="container">
+        <div class="post__capa" [style.background]="visual().gradiente" aria-hidden="true">
+          <app-icon [nome]="visual().icone" [tamanho]="96" />
+        </div>
+
+        <div class="post__conteudo">
+          @for (paragrafo of post.conteudo; track $index) {
+            <p>{{ paragrafo }}</p>
+          }
+        </div>
+
+        <footer class="post__rodape">
+          <a routerLink="/noticias" class="link-seta">
+            <app-icon nome="seta-esquerda" [tamanho]="18" /> Voltar para as notícias
+          </a>
+        </footer>
+      </div>
+    </article>
+
+    @if (relacionados().length) {
+      <section class="secao secao--clara" aria-labelledby="titulo-relacionados">
+        <div class="container">
+          <h2 id="titulo-relacionados">Leia também</h2>
+          <ul class="grade lista">
+            @for (item of relacionados(); track item.id) {
+              <li><app-post-card [post]="item" /></li>
+            }
+          </ul>
+        </div>
+      </section>
+    }
+  }
+}

@@ -1,0 +1,117 @@
+<!-- Destaque principal -->
+<section class="destaque" aria-labelledby="titulo-destaque">
+  <div class="container destaque__grade">
+    <div class="destaque__texto">
+      <p class="destaque__selo">
+        <app-icon nome="folha" [tamanho]="18" /> Plano Energia Verde 2035
+      </p>
+      <h1 id="titulo-destaque">Energia que move o presente. Compromisso que protege o futuro.</h1>
+      <p class="destaque__descricao">
+        Há mais de 50 anos a Green Petroil produz a energia que o Brasil precisa, investindo em
+        tecnologia, captura de carbono e inovação para fazer do petróleo um aliado na construção de um
+        futuro mais limpo.
+      </p>
+      <div class="destaque__acoes">
+        <a routerLink="/sobre" class="botao botao--primario">
+          Conheça a empresa <app-icon nome="seta-direita" [tamanho]="18" />
+        </a>
+        <a routerLink="/projetos-sociais" class="botao botao--claro">Projetos sociais</a>
+      </div>
+    </div>
+
+    <div class="destaque__ilustracao" aria-hidden="true">
+      <div class="destaque__gota">
+        <app-icon nome="plataforma" [tamanho]="120" />
+      </div>
+      <div class="destaque__bolha destaque__bolha--1"><app-icon nome="folha" [tamanho]="28" /></div>
+      <div class="destaque__bolha destaque__bolha--2"><app-icon nome="raio" [tamanho]="24" /></div>
+      <div class="destaque__bolha destaque__bolha--3"><app-icon nome="onda" [tamanho]="26" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- Feed: 3 últimos posts -->
+<section class="secao" aria-labelledby="titulo-feed">
+  <div class="container">
+    <div class="cabecalho-secao">
+      <div>
+        <p class="sobretitulo">Feed de notícias</p>
+        <h2 id="titulo-feed">Nossos grandes projetos</h2>
+      </div>
+      <a routerLink="/noticias" class="link-seta">
+        Ver todas as notícias <app-icon nome="seta-direita" [tamanho]="18" />
+      </a>
+    </div>
+
+    <app-load-state
+      [estado]="estadoPosts()"
+      mensagemCarregando="Carregando as últimas notícias..."
+      (tentarNovamente)="carregarPosts()"
+    />
+
+    @if (estadoPosts() === 'ok') {
+      <ul class="grade lista-limpa" aria-label="Últimas notícias">
+        @for (post of posts(); track post.id) {
+          <li><app-post-card [post]="post" /></li>
+        }
+      </ul>
+    }
+  </div>
+</section>
+
+<!-- Números -->
+@if (numeros().length) {
+  <section class="numeros" aria-labelledby="titulo-numeros">
+    <div class="container">
+      <h2 id="titulo-numeros" class="sr-only">Green Petroil em números</h2>
+      <dl class="numeros__lista">
+        @for (numero of numeros(); track numero.rotulo) {
+          <div class="numeros__item">
+            <dt>{{ numero.rotulo }}</dt>
+            <dd>{{ numero.valor }}</dd>
+          </div>
+        }
+      </dl>
+    </div>
+  </section>
+}
+
+<!-- Projetos sociais em destaque -->
+<section class="secao secao--clara" aria-labelledby="titulo-projetos">
+  <div class="container">
+    <div class="cabecalho-secao">
+      <div>
+        <p class="sobretitulo">Responsabilidade social</p>
+        <h2 id="titulo-projetos">Energia para transformar vidas</h2>
+      </div>
+      <a routerLink="/projetos-sociais" class="link-seta">
+        Ver todos os projetos <app-icon nome="seta-direita" [tamanho]="18" />
+      </a>
+    </div>
+
+    <app-load-state
+      [estado]="estadoProjetos()"
+      mensagemCarregando="Carregando projetos sociais..."
+      (tentarNovamente)="carregarProjetos()"
+    />
+
+    @if (estadoProjetos() === 'ok') {
+      <ul class="grade lista-limpa" aria-label="Projetos sociais em destaque">
+        @for (projeto of projetos(); track projeto.id) {
+          <li><app-project-card [projeto]="projeto" [detalhado]="false" /></li>
+        }
+      </ul>
+    }
+  </div>
+</section>
+
+<!-- Chamada final -->
+<section class="chamada" aria-labelledby="titulo-chamada">
+  <div class="container chamada__conteudo">
+    <h2 id="titulo-chamada">O petróleo também pode ser parte da solução</h2>
+    <p>
+      Conheça nossa história, nossa missão e os valores que guiam cada decisão da Green Petroil.
+    </p>
+    <a routerLink="/sobre" class="botao botao--primario">Nossa história</a>
+  </div>
+</section>
